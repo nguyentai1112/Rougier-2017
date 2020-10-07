@@ -91,10 +91,10 @@ if __name__ == '__main__':
 
     default = {
         "n_point": 5000,
-        "n_iter": 50,
+        "n_iter": 25,
         "threshold": 255,
         "force": False,
-        "save": False,
+        "save": True,
         "figsize": 6,
         "display": False,
         "interactive": False,
@@ -134,7 +134,8 @@ if __name__ == '__main__':
                         help='Display intermediate results (slower)')
     args = parser.parse_args()
 
-    filename = args.filename
+   # filename = args.filename
+    filename = '../data/boots.jpg'
     density = scipy.misc.imread(filename, flatten=True, mode='L')
 
     # We want (approximately) 500 pixels per voronoi region
